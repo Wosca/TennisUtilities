@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="TennisUtilities.VideoView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TennisUtilities"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock x:Name="FileNameTextBlock" FontSize="24" />
+        <TextBlock x:Name="FilePathTextBlock" FontSize="14" />
+        <MediaPlayerElement x:Name="mediaPlayerElement" Width="800" Height="450" AutoPlay="True" />
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+            <Button Content="&lt;&lt; Frame Back" Click="FrameBackButton_Click" Margin="5" />
+            <Button Content="Play/Pause" Click="PlayPauseButton_Click" Margin="5" />
+            <Button Content="Frame Forward &gt;&gt;" Click="FrameForwardButton_Click" Margin="5" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+            <Button Content="Set Contact" Click="SetContactButton_Click" Margin="5" />
+            <Button Content="Set Landed" Click="SetLandedButton_Click" Margin="5" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+            <Button Content="Submit" Click="SubmitButtonClick" Margin="5" />
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center" Margin="20">
+            <TextBlock Text="Contact Time:" FontSize="18" />
+            <TextBlock x:Name="ContactTimeTextBlock" FontSize="16" />
+            <TextBlock Text="Landed Time:" FontSize="18" />
+            <TextBlock x:Name="LandedTimeTextBlock" FontSize="16" />
+        </StackPanel>
+    </StackPanel>
+</Page>
